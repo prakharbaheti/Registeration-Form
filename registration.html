@@ -1,0 +1,236 @@
+<!Doctype html >
+<html><head>
+<title>Login page</title><link rel="stylesheet" href="mystyle.css">
+<script >
+function validation_form()
+{
+var firstname=document.getElementById('firstname').value;
+if(firstname.length<2)
+{alert("first name should be more than two characters");
+
+return false;}
+
+
+var email=document.getElementById('email').value;
+ var atpos = email.indexOf("@");
+    var dotpos = email.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+        alert('Not a valid e-mail address');
+        return false;}
+
+ var x = document.getElementById('phonenumber').value;
+
+    
+    if (isNaN(x) || x < 1 || x > 11) {
+        alert('Input not valid');
+		return false;
+    } 
+	
+var y=document.getElementById('password').value;
+var z=document.getElementById('confirmpassword').value;
+if(y!==z)
+{
+alert('password didnt match!');
+return false;
+}
+return true;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</head>
+<style>
+fieldset{width:50%;
+margin:100px 100px;}
+div{
+    position: fixed;
+    bottom: 100;
+    right: 700px;
+    width: 300px;
+    
+background-color:white;
+}
+.a:focus{background-color:grey;}
+.b:hover{border:0.1px solid black;}
+a{padding:0 32px;}
+a:link {
+    color: blue;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: grey;
+}
+
+
+</style>
+<body>
+<h1><div style="text-align:center;text-decoration:underline;text-shadow: 2px 2px #FF0000;font-size: 1.0em;">REGISTRATION PAGE</h1>
+<br><br><br><br><hr ></div>
+<form action="action_page.php" onsubmit="return validation_form()">
+  <fieldset>
+    <legend>PERSONAL INFORMATION:</legend>
+    First name:
+    <input class="a b"type="text" id="firstname" placeholder="Mandatory" ><br><br>
+    Last name:
+    <input class="a b" type="text" id="lastname" placeholder="optional"><br><br>
+  Email Address:
+<input class="a b" type="text" id="email" placeholder="Valid address" ><br><br>
+Phone number:
+    <input class="a b" type="text" id="phonenumber"placeholder="number in digits" minlength="10" required><br><br>
+Password:
+    <input class="a b" type="password" id="password" minlength="8" placeholder="More than 8 characters" required><br><br>
+Confirm password:
+    <input class="a b" type="password" id="confirmpassword" placeholder="Type it again"required><br><br>
+Gender:
+<input list="gender"  name="gend" placeholder="select">
+  <datalist id="gender">
+    <option value="Male">
+    <option value="Female">
+    <option value="Other">
+ </datalist><br><br>
+Date of brith:
+<select name="DOBMonth" required>
+ <option> - Month - </option>
+ <option value="January">January</option>
+ <option value="Febuary">Febuary</option>
+ <option value="March">March</option>
+ <option value="April">April</option>
+ <option value="May">May</option>
+ <option value="June">June</option>
+ <option value="July">July</option>
+ <option value="August">August</option>
+ <option value="September">September</option>
+ <option value="October">October</option>
+ <option value="November">November</option>
+ <option value="December">December</option>
+</select>
+
+<select name="DOBDay"required>
+ <option required> - Day - </option>
+ <option value="1">1</option>
+ <option value="2">2</option>
+ <option value="3">3</option>
+ <option value="4">4</option>
+ <option value="5">5</option>
+ <option value="6">6</option>
+ <option value="7">7</option>
+ <option value="8">8</option>
+ <option value="9">9</option>
+ <option value="10">10</option>
+ <option value="11">11</option>
+ <option value="12">12</option>
+ <option value="13">13</option>
+ <option value="14">14</option>
+ <option value="15">15</option>
+ <option value="16">16</option>
+ <option value="17">17</option>
+ <option value="18">18</option>
+ <option value="19">19</option>
+ <option value="20">20</option>
+ <option value="21">21</option>
+ <option value="22">22</option>
+ <option value="23">23</option>
+ <option value="24">24</option>
+ <option value="25">25</option>
+ <option value="26">26</option>
+ <option value="27">27</option>
+ <option value="28">28</option>
+ <option value="29">29</option>
+ <option value="30">30</option>
+ <option value="31">31</option>
+</select>
+
+<select name="DOBYear" required>
+ <option> - Year - </option>
+ <option value="1993">1993</option>
+ <option value="1992">1992</option>
+ <option value="1991">1991</option>
+ <option value="1990">1990</option>
+ <option value="1989">1989</option>
+ <option value="1988">1988</option>
+ <option value="1987">1987</option>
+ <option value="1986">1986</option>
+ <option value="1985">1985</option>
+ <option value="1984">1984</option>
+ <option value="1983">1983</option>
+ <option value="1982">1982</option>
+ <option value="1981">1981</option>
+ <option value="1980">1980</option>
+ <option value="1979">1979</option>
+ <option value="1978">1978</option>
+ <option value="1977">1977</option>
+ <option value="1976">1976</option>
+ <option value="1975">1975</option>
+ <option value="1974">1974</option>
+ <option value="1973">1973</option>
+ <option value="1972">1972</option>
+ <option value="1971">1971</option>
+ <option value="1970">1970</option>
+ <option value="1969">1969</option>
+ <option value="1968">1968</option>
+ <option value="1967">1967</option>
+ <option value="1966">1966</option>
+ <option value="1965">1965</option>
+ <option value="1964">1964</option>
+ <option value="1963">1963</option>
+ <option value="1962">1962</option>
+ <option value="1961">1961</option>
+ <option value="1960">1960</option>
+ <option value="1959">1959</option>
+ <option value="1958">1958</option>
+ <option value="1957">1957</option>
+ <option value="1956">1956</option>
+ <option value="1955">1955</option>
+ <option value="1954">1954</option>
+ <option value="1953">1953</option>
+ <option value="1952">1952</option>
+ <option value="1951">1951</option>
+ <option value="1950">1950</option>
+ <option value="1949">1949</option>
+ <option value="1948">1948</option>
+ <option value="1947">1947</option></select><br><br>
+
+
+<input type="image" src="img_submit.gif" alt="Submit" width="20" height="20">
+  </fieldset>
+</form>
+<span style="float:right;">Already have a account?<a href="signup.php">Sign in</a></span>
+</body>
+</html>
