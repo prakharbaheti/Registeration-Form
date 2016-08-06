@@ -1,0 +1,70 @@
+<!Doctype html >
+<html><head>
+<title>Login page</title><link rel="stylesheet" href="mystyle.css">
+<script type="text/javascript">
+function userid_validation()  
+{var username=document.getElementById('username').value;
+var password=document.getElementById('password').value;
+if(username=="" || password=="")
+{alert('Please fill  the boxes');return false;}
+else{return true;}
+
+
+
+
+
+
+}
+</script>
+<head>
+<style>
+hr{width:50%;}
+.a:focus{background-color:grey;}
+.b:hover{border:0.1px solid black;
+}
+div{
+
+margin:50px 500px;
+border:2px solid black;
+padding:5px;
+width:300px;
+}
+a{padding:0 32px;}
+a:link {
+    color: blue;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: grey;
+}
+</style>
+
+<body>
+<h1 style="text-align:center;text-decoration:underline;text-shadow: 2px 2px #FF0000;font-size: 2.5em;">LOGIN</h1>
+<hr>
+<div>
+<form action="action_page.php" onsubmit="return userid_validation()" name="myform">
+Username:<br>
+<input class="a b" type="text" id="username" name="fname" placeholder="Typehere"   ><br>
+Password:<br>
+<input class="a b" type="password" id="password" name="password" placeholder="Typehere"  ><br>
+<br>
+<input type="submit" Value="Go" ><a href="http://www.google.com" >forget password</a>
+</form>
+</div>
+<br><br><br>
+<span style="float:right;">Dont have a account?<a href="signup.php">Sign up</a></span>
+
+</body>
+</html>
