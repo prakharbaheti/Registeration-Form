@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To do list</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="/untitled/todolist1.js"></script>
+<script>
+
+$(function(){
+
+
+$('#add-order').on('click',function(){
+var x=$("#textarea").val();
+if(x.length==0||!/[^\s]/.test(x))
+{
+alert('You have type nothing!')
+}
+
+else{
+
+$('#form').prepend('<span class="todo"><input type="checkbox" >'+ x+'<br></span>');
+$("#textarea").val('');
+$('#textarea').focus();
+
+}
+});
+
+
+
+$(document).on('click','.todo', function(){
+        $(this).fadeOut(300,function(){
+
+$(this).remove();	
+
+});
+
+   
+});
+
+});
+
+
+</script>
+</head>
+</body>
+<textarea rows="4" cols="50" id="textarea" placeholder="todolist">
+</textarea>
+<br>
+<button id="add-order" >Add</button>
+<form id="form">
+
+</form>
+
+
+</body>
+</html>
